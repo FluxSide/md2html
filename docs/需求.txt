@@ -1,0 +1,8 @@
+帮我做一个Node.js命令行工具，功能是把Markdown文件转换成HTML文件。
+要求：
+1. 命令格式：md2html input.md -o output.html
+2. 支持标题、段落、列表、代码块、链接、图片等基本语法
+3. 生成的HTML要包含一个简洁的默认样式
+4. 如果不指定输出文件名，就用输入文件名加.html后缀
+5. 加上 -watch 参数可以监听文件变化自动重新转换
+用TypeScript写，配置好tsconfig和package.json。
