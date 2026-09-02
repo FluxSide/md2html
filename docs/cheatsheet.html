@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Markdown Preview</title>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1f2937;
+      background: #ffffff;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.3;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    h1 {
+      font-size: 2rem;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      color: #1d4ed8;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 12px 0 20px;
+    }
+
+    pre {
+      background: #0b1220;
+      color: #e5e7eb;
+      padding: 16px;
+      border-radius: 10px;
+      overflow: auto;
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+    }
+
+    p code, li code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.92em;
+    }
+
+    blockquote {
+      margin: 0 0 18px;
+      padding: 10px 16px;
+      border-left: 4px solid #2563eb;
+      background: #f9fafb;
+      color: #374151;
+      border-radius: 0 8px 8px 0;
+    }
+
+    blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #f9fafb;
+      font-weight: 600;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 28px 0;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 24px 16px 48px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>命令速查卡</h1>
+<p>本文把最常用的命令集中在一起，方便快速复制和对照。</p>
+<h2>环境准备</h2>
+<pre><code class="language-powershell">npm install
+</code></pre>
+<h2>运行与测试</h2>
+<pre><code class="language-powershell">npm test
+</code></pre>
+<pre><code class="language-powershell">npm run build
+</code></pre>
+<h2>基础转换</h2>
+<pre><code class="language-powershell">node --import tsx/esm src/index.ts README.md
+</code></pre>
+<h2>指定输出路径</h2>
+<pre><code class="language-powershell">node --import tsx/esm src/index.ts README.md -o dist/README.html
+</code></pre>
+<h2>监听文件变化</h2>
+<pre><code class="language-powershell">node --import tsx/esm src/index.ts README.md --watch
+</code></pre>
+<h2>常用脚本</h2>
+<pre><code class="language-powershell">npm run md2html -- README.md
+</code></pre>
+<pre><code class="language-powershell">npm run dev
+</code></pre>
+<h2>快速对照</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>安装依赖</td>
+<td><code>npm install</code></td>
+</tr>
+<tr>
+<td>运行测试</td>
+<td><code>npm test</code></td>
+</tr>
+<tr>
+<td>编译项目</td>
+<td><code>npm run build</code></td>
+</tr>
+<tr>
+<td>转换文件</td>
+<td><code>node --import tsx/esm src/index.ts README.md</code></td>
+</tr>
+<tr>
+<td>指定输出</td>
+<td><code>node --import tsx/esm src/index.ts README.md -o dist/README.html</code></td>
+</tr>
+<tr>
+<td>监听变化</td>
+<td><code>node --import tsx/esm src/index.ts README.md --watch</code></td>
+</tr>
+<tr>
+<td>开发模式</td>
+<td><code>npm run dev</code></td>
+</tr>
+</tbody></table>
+
+  </main>
+</body>
+</html>
